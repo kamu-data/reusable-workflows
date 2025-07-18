@@ -58,8 +58,7 @@ jobs:
           helmfile-args: -e ${{ inputs.environment }} ${{ inputs.helm_action }}
           helm-plugins: >-
             https://github.com/databus23/helm-diff,
-            https://github.com/jkroepke/helm-secrets,
-            https://github.com/aslafy-z/helm-git
+            https://github.com/jkroepke/helm-secrets
           helm-diff-color: false
       - uses: kamu-data/helm-diff-comment@v1
         if: ${{ inputs.helm_action == 'diff' || inputs.helm_action == 'apply' }}
