@@ -50,7 +50,7 @@ jobs:
           aws-region: ${{ inputs.aws_region }}
           role-to-assume: ${{ inputs.iam_role_arn }}
       - run: aws eks update-kubeconfig --name ${{ inputs.cluster_name }}
-      - uses: helmfile/helmfile-action@v2.0.4
+      - uses: helmfile/helmfile-action@v2.0.5
         id: helmfile-diff
         with:
           helmfile-version: ${{ inputs.helmfile_version }}
