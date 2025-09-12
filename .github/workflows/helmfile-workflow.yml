@@ -57,7 +57,7 @@ jobs:
           helm-version: ${{ inputs.helm_version }}
           helmfile-args: -e ${{ inputs.environment }} ${{ inputs.helm_action }}
           helm-plugins: >-
-            https://github.com/databus23/helm-diff@3.9.10,
+            https://github.com/databus23/helm-diff@v3.9.10,
             https://github.com/jkroepke/helm-secrets@v4.6.1
           helm-diff-color: false
       - uses: kamu-data/helm-diff-comment@v1
